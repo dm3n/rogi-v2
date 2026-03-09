@@ -137,3 +137,13 @@
 .animate-bounce-once {
   animation: bounce-once 0.6s ease-out;
 }
+
+@keyframes nudge-right {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(5px); }
+  70% { transform: translateX(2px); }
+}
+
+.animate-nudge {
+  animation: nudge-right 1.4s ease-in-out infinite;
+}

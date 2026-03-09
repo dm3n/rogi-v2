@@ -84,9 +84,9 @@ export default function LeftPanel({ step, state }: Props) {
             <p className="text-violet-600 text-sm">{msg.sub}</p>
             <Link
               href="/buildout"
-              className="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-violet-500 hover:text-violet-700 transition-colors"
+              className="inline-flex items-center gap-1.5 mt-6 text-xs font-semibold text-violet-500 hover:text-violet-700 transition-colors group"
             >
-              Complete ROGI Buildout <ArrowRight className="w-3 h-3" />
+              Complete ROGI Buildout <ArrowRight className="w-3 h-3 animate-nudge group-hover:[animation-play-state:paused]" />
             </Link>
           </div>
         </div>
@@ -224,9 +224,9 @@ export default function LeftPanel({ step, state }: Props) {
       <div className="mt-auto pt-8 space-y-2">
         <Link
           href="/buildout"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-violet-500 hover:text-violet-300 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-violet-500 hover:text-violet-300 transition-colors group"
         >
-          Complete ROGI Buildout <ArrowRight className="w-3 h-3" />
+          Complete ROGI Buildout <ArrowRight className="w-3 h-3 animate-nudge group-hover:[animation-play-state:paused]" />
         </Link>
         <p className="text-violet-600 text-xs">Powered by ROGI · rogi.ca</p>
       </div>
