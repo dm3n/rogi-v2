@@ -51,7 +51,7 @@ export default function BuildoutPage() {
             { value: '15 min', label: 'Avg. intake' },
             { value: '80%', label: 'Complete at hand-off' },
             { value: '0', label: 'Manual touches' },
-            { value: '2×–3×', label: 'Target ROI' },
+            { value: '3×–5×', label: 'Target ROI' },
           ].map(s => (
             <div key={s.label} className="bg-white px-4 sm:px-5 py-5">
               <div className="text-xl font-bold text-violet-700 tracking-tight">{s.value}</div>
@@ -354,7 +354,7 @@ export default function BuildoutPage() {
         <div className="mb-14 md:mb-20">
           <p className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-6">The ROI</p>
           <div className="mb-3">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-1">$4k/mo opex. 2×–3× return.</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-1">$4k/mo opex. 3×–5× return.</h2>
             <p className="text-sm text-gray-400">$2,500 ad spend + $1,500 ROGI management fee</p>
           </div>
 
@@ -367,9 +367,9 @@ export default function BuildoutPage() {
 
             {[
               { stage: 'Ad clicks', n: 500, rate: null, rateLabel: null, bar: 100, desc: '$2,500 ÷ $5 CPC' },
-              { stage: 'Applications started', n: 100, rate: '20%', rateLabel: 'click → submit', bar: 20, desc: 'Land on apply.rogi.ca and enter basic info' },
-              { stage: 'Documents uploaded', n: 15, rate: '15%', rateLabel: 'submit → upload', bar: 3, desc: 'AI nudge sequence drives doc collection' },
-              { stage: 'Verified profiles', n: 5, rate: '30%', rateLabel: 'docs → verified', bar: 1, desc: 'Fraud check passed · income confirmed' },
+              { stage: 'Applications started', n: 150, rate: '30%', rateLabel: 'click → submit', bar: 30, desc: 'Land on apply.rogi.ca and enter basic info' },
+              { stage: 'Documents uploaded', n: 45, rate: '30%', rateLabel: 'submit → upload', bar: 9, desc: 'AI nudge sequence drives doc collection' },
+              { stage: 'Verified profiles', n: 13, rate: '30%', rateLabel: 'docs → verified', bar: 2.6, desc: 'Fraud check passed · income confirmed' },
             ].map((row, i) => (
               <div key={row.stage} className={`px-4 sm:px-5 py-4 ${i < 3 ? 'border-b border-gray-100' : ''}`}>
                 <div className="flex items-center justify-between mb-2">
@@ -394,12 +394,12 @@ export default function BuildoutPage() {
             ))}
 
             <div className="px-4 sm:px-5 py-4 bg-gray-50 border-t border-gray-100">
-              <p className="text-xs font-medium text-gray-400 mb-3">5 verified profiles handed to broker · close rate determines outcome</p>
+              <p className="text-xs font-medium text-gray-400 mb-3">13 verified profiles handed to broker · close rate determines outcome</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3">
                   <div className="text-center shrink-0 w-10">
-                    <p className="text-lg font-bold text-gray-900">1</p>
-                    <p className="text-xs text-gray-400">deal</p>
+                    <p className="text-lg font-bold text-gray-900">3</p>
+                    <p className="text-xs text-gray-400">deals</p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-gray-600">20% close rate</p>
@@ -408,11 +408,11 @@ export default function BuildoutPage() {
                 </div>
                 <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3">
                   <div className="text-center shrink-0 w-10">
-                    <p className="text-lg font-bold text-gray-900">2</p>
+                    <p className="text-lg font-bold text-gray-900">4</p>
                     <p className="text-xs text-gray-400">deals</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-600">40% close rate</p>
+                    <p className="text-xs font-semibold text-gray-600">30% close rate</p>
                     <p className="text-xs text-gray-400">Strong · pre-qualified leads</p>
                   </div>
                 </div>
@@ -423,19 +423,19 @@ export default function BuildoutPage() {
           {/* ROI outcome cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             <div className="border border-gray-100 rounded-xl p-6">
-              <p className="text-xs font-medium text-gray-400 mb-3">Low end · 1 deal/mo · 20% close</p>
-              <p className="text-3xl font-bold text-gray-900 tracking-tight mb-1">$3.5–5k</p>
+              <p className="text-xs font-medium text-gray-400 mb-3">Low end · 3 deals/mo · 20% close</p>
+              <p className="text-3xl font-bold text-gray-900 tracking-tight mb-1">$10–15k</p>
               <p className="text-xs text-gray-400">Commission / month</p>
               <div className="mt-4 inline-block text-xs font-medium text-gray-500 bg-gray-50 border border-gray-100 px-2.5 py-1 rounded-md">
-                Near break-even
+                ~3× ROI
               </div>
             </div>
             <div className="border border-gray-900 rounded-xl p-6 bg-gray-900">
-              <p className="text-xs font-medium text-gray-400 mb-3">Target · 2 deals/mo · 40% close</p>
-              <p className="text-3xl font-bold text-white tracking-tight mb-1">$7–10k</p>
+              <p className="text-xs font-medium text-gray-400 mb-3">Target · 4 deals/mo · 30% close</p>
+              <p className="text-3xl font-bold text-white tracking-tight mb-1">$14–20k</p>
               <p className="text-xs text-gray-400">Commission / month</p>
               <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-gray-200 bg-gray-700 px-2.5 py-1 rounded-md">
-                <TrendingUp className="w-3 h-3" /> 2× – 2.5× ROI
+                <TrendingUp className="w-3 h-3" /> 3.5× – 5× ROI
               </div>
             </div>
           </div>
